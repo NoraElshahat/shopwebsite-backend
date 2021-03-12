@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
-const Product = require('./Product')
-const Provider = require('./Provider')
+
 
 const provider_productSchema = new mongoose.Schema({
     product_id:{
-        type : Number,
+        type : mongoose.Schema.Types.ObjectId,
         ref:"Product"
     },
     provider_id:{
-        type : Number,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"Provider"
     },
     price:{

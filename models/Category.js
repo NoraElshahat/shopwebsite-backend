@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const Product = require('./Product')
 
 const CategorySchema = new mongoose.Schema({
     _id:{
@@ -11,7 +10,7 @@ const CategorySchema = new mongoose.Schema({
         trim:true
     },
     parent_id:{
-        type:Number,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"Product"
     }
 })
